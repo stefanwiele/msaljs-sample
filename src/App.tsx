@@ -31,9 +31,9 @@ class App extends Component<any, State> {
     this.msalConfig = {
       config: {
         auth: {
-          clientId: "31c0ca04-16fb-49b6-83a2-e8c8487ea4fd",
-          authority: "https://login.microsoftonline.com/98a34a88-7940-40e8-af71-913452037f31",
-          redirectUrl: "http://localhost:3000/#/"
+          clientId: "d971883d-086c-4b4c-984c-60c5a630b543",
+          authority: "https://login.microsoftonline.com/unicorntoso.onmicrosoft.com",
+          redirectUrl: "https://witty-coast-06e370b03.azurestaticapps.net/#/"
         },
         cache: {
           cacheLocation: "sessionStorage" // session storage is more secure, but prevents single-sign-on from working. other option is 'localStorage'
