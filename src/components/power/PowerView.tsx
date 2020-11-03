@@ -30,7 +30,7 @@ export class PowerView extends React.Component<Props, State> {
         this.state = { devices: [new Device("loading...", "loading...", "loading...", new DeviceState(0, 0))] };
 
         // here we set the scopes we'll need to request from the user for this view
-        this.scopeConfiguration = { scopes: ["api://azuread-demo-api.azurewebsites.net/power", "api://azuread-demo-api.azurewebsites.net/wake"] };
+        this.scopeConfiguration = { scopes: ["https://azuread-demo-api.azurewebsites.net/power", "https://azuread-demo-api.azurewebsites.net/wake"] };
     }
 
     componentDidMount() {
