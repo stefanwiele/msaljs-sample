@@ -31,7 +31,7 @@ class App extends Component<any, State> {
     this.msalConfig = {
       config: {
         auth: {
-          clientId: "dbad42db-37b7-4d45-a4b4-c02810a448bf",
+          clientId: "d971883d-086c-4b4c-984c-60c5a630b543",
           authority: "https://login.microsoftonline.com/unicorntoso.onmicrosoft.com",
           redirectUrl: "https://witty-coast-06e370b03.azurestaticapps.net/#/"
         },
