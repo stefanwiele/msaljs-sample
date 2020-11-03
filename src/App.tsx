@@ -27,7 +27,7 @@ class App extends Component<any, State> {
 
   constructor(p: any, s: State) {
     super(p, s);
-    this.endpoint = "https://msaljs.jpda.app/api";
+    this.endpoint = "https://azureaddemo-unicorntoso.azurewebsites.net/api";
     this.msalConfig = {
       config: {
         auth: {
@@ -39,14 +39,14 @@ class App extends Component<any, State> {
           cacheLocation: "sessionStorage" // session storage is more secure, but prevents single-sign-on from working. other option is 'localStorage'
         },
         protectedResourceMap: [
-          ['https://msaljs.jpda.app/api', ["api://msaljs.jpda.app/power", "api://msaljs.jpda.app/wake"]],
-          ['https://msaljs.jpda.app/api', ["api://msaljs.jpda.app/power", "api://msaljs.jpda.app/wake"]],
+          ['https://azureaddemo-unicorntoso.azurewebsites.net/api', ["api://azureaddemo-unicorntoso.azurewebsites.net/power", "api://azureaddemo-unicorntoso.azurewebsites.net/wake"]],
+          ['https://azureaddemo-unicorntoso.azurewebsites.net/api', ["api://azureaddemo-unicorntoso.azurewebsites.net/power", "api://azureaddemo-unicorntoso.azurewebsites.net/wake"]],
           ['https://graph.microsoft.com/v1.0/me', ['https://graph.microsoft.com/User.Read']],
           ['https://graph.microsoft.com/v1.0/me/calendarview', ['https://graph.microsoft.com/Calendar.Read']],
         ]
       },
       requestConfig: {
-        scopes: ["api://msaljs.jpda.app/.default"] // static scopes
+        scopes: ["api://azureaddemo-unicorntoso.azurewebsites.net/.default"] // static scopes
       },
       apiConfig: { apiEndpoint: this.endpoint }
     }
