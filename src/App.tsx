@@ -39,14 +39,14 @@ class App extends Component<any, State> {
           cacheLocation: "sessionStorage" // session storage is more secure, but prevents single-sign-on from working. other option is 'localStorage'
         },
         protectedResourceMap: [
-          ['https://azuread-demo-api.azurewebsites.net/api', ["api://azuread-demo-api.azurewebsites.net/power", "api://azuread-demo-api.azurewebsites.net/wake"]],
-          ['https://azuread-demo-api.azurewebsites.netapi', ["api://azuread-demo-api.azurewebsites.net/power", "api://azuread-demo-api.azurewebsites.net/wake"]],
+          ['https://azuread-demo-api.azurewebsites.net/api', ["https://azuread-demo-api.azurewebsites.net/power", "https://azuread-demo-api.azurewebsites.net/wake"]],
+          ['https://azuread-demo-api.azurewebsites.net/api', ["https://azuread-demo-api.azurewebsites.net/power", "https://azuread-demo-api.azurewebsites.net/wake"]],
           ['https://graph.microsoft.com/v1.0/me', ['https://graph.microsoft.com/User.Read']],
           ['https://graph.microsoft.com/v1.0/me/calendarview', ['https://graph.microsoft.com/Calendar.Read']],
         ]
       },
       requestConfig: {
-        scopes: ["api://azuread-demo-api.azurewebsites.net/.default"] // static scopes
+        scopes: ["https://azuread-demo-api.azurewebsites.net/.default"] // static scopes
       },
       apiConfig: { apiEndpoint: this.endpoint }
     }
