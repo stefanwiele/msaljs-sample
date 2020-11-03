@@ -27,7 +27,7 @@ class App extends Component<any, State> {
 
   constructor(p: any, s: State) {
     super(p, s);
-    this.endpoint = "http://msal-demo-api.azurewebsites.net/api";
+    this.endpoint = "https://azuread-demo-api.azurewebsites.net/api";
     this.msalConfig = {
       config: {
         auth: {
@@ -39,14 +39,14 @@ class App extends Component<any, State> {
           cacheLocation: "sessionStorage" // session storage is more secure, but prevents single-sign-on from working. other option is 'localStorage'
         },
         protectedResourceMap: [
-          ['http://msal-demo-api.azurewebsites.net/api', ["api://msal-demo-api.azurewebsites.net/power", "api://msal-demo-api.azurewebsites.net/wake"]],
-          ['http://msal-demo-api.azurewebsites.net/api', ["api://msal-demo-api.azurewebsites.net/power", "api://msal-demo-api.azurewebsites.net/wake"]],
+          ['https://azuread-demo-api.azurewebsites.net/api', ["api://azuread-demo-api.azurewebsites.net/power", "api://azuread-demo-api.azurewebsites.net/wake"]],
+          ['https://azuread-demo-api.azurewebsites.netapi', ["api://azuread-demo-api.azurewebsites.net/power", "api://azuread-demo-api.azurewebsites.net/wake"]],
           ['https://graph.microsoft.com/v1.0/me', ['https://graph.microsoft.com/User.Read']],
           ['https://graph.microsoft.com/v1.0/me/calendarview', ['https://graph.microsoft.com/Calendar.Read']],
         ]
       },
       requestConfig: {
-        scopes: ["api://msal-demo-api.azurewebsites.net/.default"] // static scopes
+        scopes: ["api://azuread-demo-api.azurewebsites.net/.default"] // static scopes
       },
       apiConfig: { apiEndpoint: this.endpoint }
     }
